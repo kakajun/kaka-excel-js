@@ -1,0 +1,3500 @@
+{
+    "header": [
+        {
+            "index0": {
+                "value": "客商名称",
+                "colspan": 1,
+                "rowspan": 2,
+                "type": "string"
+            },
+            "index1": {
+                "value": "关联公司",
+                "colspan": 1,
+                "rowspan": 2,
+                "type": "string"
+            },
+            "index2": {
+                "value": "年初",
+                "colspan": 2,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "本期累计增加",
+                "colspan": 2,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "本期累计减少",
+                "colspan": 2,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "期末",
+                "colspan": 2,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "账面余额占比",
+                "colspan": 1,
+                "rowspan": 2,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "账面余额",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index1": {
+                "value": "坏账准备",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index2": {
+                "value": "账面余额",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "坏账准备",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "账面余额",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "坏账准备",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "账面余额",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "坏账准备",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        }
+    ],
+    "body": [
+        {
+            "index0": {
+                "value": "一、应收账款",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "　",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "ACTIUM PTE.LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋远盛船舶管理有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-3.84",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "46.43",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "38.42",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-11.86",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.01%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "ACTIUM PTE.LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋船员管理有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "42.30",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "455.26",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "455.26",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "42.30",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.03%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "AMC INTERNATIONAL HOLDINGS LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "1,388.03",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "1,215.73",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-172.30",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.10%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "AMC INTERNATIONAL HOLDINGS LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "1.68",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "3,198.20",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "3,246.85",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "50.34",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.03%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "AMC INTERNATIONAL HOLDINGS LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-2.61",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-2.61",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "BAOSTEEL RESOURCES CO., LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏欣海国际物流有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "99.00",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "175.28",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "76.28",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.05%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "BELTRUNO LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏嵘海国际物流有限公司张家港分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-22.78",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "6.78",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "33.55",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "4.00",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "Ben Line Agencies（S）Limited",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "太仓港集装箱海运有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "1,007.88",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "3,562.99",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "2,371.14",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-183.96",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.11%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "BILGENT SHIPPING PTE.LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "1,953.71",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "1,884.94",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-68.77",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.04%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "BILGENT SHIPPING PTE.LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-128.06",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-128.06",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.08%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "BILGENT SHIPPING PTE.LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-87.71",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-87.71",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.05%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "BILGENT SHIPPING PTE.LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "翠州船务（香港）有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-0.31",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-0.31",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "BIOLOGICAL INNOVATION AND OPTIMIZATION SYSTEM",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋新世纪货运代理有限公司苏州分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-7.27",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-7.27",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "Bothwin Shipping Co.,Ctd",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏嵘海国际物流有限公司张家港分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-7.22",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "55.35",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "68.23",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "5.65",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "CHENGXIN CHARTERING PTE LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏欣海国际物流有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "66.89",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "35.96",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-30.92",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.02%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "CHINALAND SHIPPING PTE. LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "0.63",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "1.88",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-1.26",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "CHINALAND SHIPPING PTE. LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-38.71",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "1,673.57",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "2,330.18",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "617.90",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.38%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "CNAGENCY QINGDAO CO., LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏嵘海国际物流有限公司张家港分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-0.01",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "0.01",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "DAMPSKIBSSELSKABET NORDEN A/S",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-41.56",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "1,809.45",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "1,784.06",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-66.95",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.04%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "DAMPSKIBSSELSKABET NORDEN A/S",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-70.32",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "1,747.41",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "1,835.58",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "17.86",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.01%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "DAMPSKIBSSELSKABET NORDEN A/S",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-51.87",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "596.67",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "628.87",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-19.67",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.01%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "EMIRATES SHIPPING LINE DMCEST",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋新世纪货运代理有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "12.57",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "12.68",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "0.11",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "EVERGREEN MARINE （HONG KONG） LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋新世纪货运代理有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "81.56",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "771.67",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "816.54",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "126.43",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.08%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "FENG SEA SHIPPING PTE LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏嵘海国际物流有限公司张家港分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "71.83",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "102.78",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "88.65",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "57.71",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.04%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "GOLD EAST TRADING（HONGKONG）COMPANY LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋新世纪货运代理有限公司太仓分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "16.37",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "287.26",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "296.93",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "26.05",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.02%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "GRAND BULK CARRIER CO.,LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "3.81",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "5.57",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "1.75",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-0.01",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "GRAND BULK CARRIER CO.,LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "1.87",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "-2.28",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-0.41",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "HengFa Shipping Incorporation",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏嵘海国际物流有限公司张家港分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-1.00",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "1.00",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "INCHCAPE SHIPPING SERVICES（HONHKONG）LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋国际船舶代理有限公司南通分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-86.45",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "-86.45",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "INTERMARINE SHIPPING PTE LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "7.02",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "7.02",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "JIERUI SHIPPING PTE.LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "15.31",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "16.98",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "1.67",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "JIERUI SHIPPING PTE.LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "10.49",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "984.23",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "973.75",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "0.00",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "JR SHIPPING LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏嵘海国际物流有限公司张家港分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "1.73",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "2.40",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "0.67",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "Marine Connections Company Limited",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "太仓港集装箱海运有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "302.69",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "3,917.40",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "2,567.51",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-1,047.20",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.64%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "MARUBENI LOGISTICS CORPORATION",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋新世纪货运代理有限公司太仓分公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "0.15",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "44.12",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "47.10",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "3.13",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "MIDEA ELECTRIC TRADING（SINGAPORE）CO. PTE. LTD.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋新世纪货运代理有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "307.46",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "307.46",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "MINMETALS SHIPPING（SINGAPORE）PTE LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "87.42",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "87.42",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.05%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "MSC MEDITERRANEAN SHIPPING COMPANY S.A",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋新世纪货运代理有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "0.19",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "2,372.20",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "2,361.10",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-10.91",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.01%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "OCEAN NETWORK EXPRESS PTE LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "太仓港集装箱海运有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "31.42",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "31.42",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "OLDENDORFF CARRIERS GMBH & CO.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-5.35",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "18.67",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "24.00",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-0.03",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "OLDENDORFF CARRIERS GMBH & CO.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-7.01",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "-7.02",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "0.01",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "OLDENDORFF CARRIERS GMBH & CO.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏欣海国际物流有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "50.94",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "51.35",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "0.41",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "PHAETHON INTERNATIONAL COMPANY",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-9.34",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "44.24",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "56.85",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "3.28",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "Prime Star Transportation Services Pte. Ltd.",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋远盛船舶管理有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-8.04",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "25.64",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "37.42",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "3.73",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "REFINED SUCCESS LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "1.44",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "0.23",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "1.21",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "REFINED SUCCESS LIMITED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-100.62",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "1,931.47",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "2,052.17",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "20.08",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.01%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "SANKYU SHIPPING INCORPORATED",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "太仓港集装箱海运有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "3,408.11",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "32,588.94",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "29,316.84",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "136.01",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "0.08%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "SING OCEAN MARINE SERVICES PTE LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏欣海国际物流有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "18.99",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "18.99",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        },
+        {
+            "index0": {
+                "value": "THE CHINA NAVIGATION CO.,PTE.,LTD",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index1": {
+                "value": "江苏远洋运输有限公司",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "string"
+            },
+            "index2": {
+                "value": "-102.94",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index3": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index4": {
+                "value": "2,259.22",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index5": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index6": {
+                "value": "2,282.59",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index7": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index8": {
+                "value": "-79.58",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index9": {
+                "value": "--",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            },
+            "index10": {
+                "value": "-0.05%",
+                "colspan": 1,
+                "rowspan": 1,
+                "type": "decimal"
+            }
+        }
+    ]
+}

@@ -20,7 +20,7 @@ function exportExcel(id,columns,datas, filename='test') {
   dom=dom.getElementsByClassName('vxe-table--main-wrapper')[0]
   let header = getTableDomRows(dom);
 
-    const body = tableData.map((item) => {
+    const body = datas.map((item) => {
     let arr = [];
     for (let index = 0; index < heards.length; index++) {
       let id = heards[index];

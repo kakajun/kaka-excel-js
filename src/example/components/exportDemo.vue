@@ -1,10 +1,15 @@
 <template>
- <div class=''  id="xGrid2">
-     <button type="button" @click='exportOut'>导出demo</button>
- <vxe-grid
-
+ <div   id="xGrid2">
+   <vxe-toolbar>
+  <template v-slot:buttons>
+    <vxe-button @click="exportEvent">导出.xlsx</vxe-button>
+  </template>
+</vxe-toolbar>
+     <vxe-button @click='exportOut'>导出demoOne</vxe-button>
+        <vxe-button @click='exportOut(2)'>导出demoTwo</vxe-button>
+         <vxe-grid
           border
-          ref="xGrid2"
+          ref="xTable"
           height="300"
           :span-method="rowspanMethod"
           :columns="tableColumn"
@@ -13,7 +18,10 @@
 </template>
 
 <script>
-import exportExcel from "../tableExportExcel"
+import {columns,datas} from '../mock.js';
+import excelExportOne from '../out-one/excelExport';
+import excelExportTwo from '../out-two/excelExport';
+
  export default {
    name:'',
    components: {
@@ -21,64 +29,56 @@ import exportExcel from "../tableExportExcel"
    },
    data () {
      return {
-           tableColumn: [
-                { field: 'name', title: 'Name',type:"string" },
-                { field: 'role', title: 'Role' ,type:"string" },
-                { field: 'sex', title: 'Sex', formatter: this.formatterSex ,type:"string" },
-                { field: 'age', title: 'Age',type:"decimal" },
-                { field: 'address', title: 'Address', showOverflow: true,type:"string"  }
-              ],
-              tableDatas: [
-                { id: 10001, name: 'Test1', nickname: 'T1', role: 'Develop', sex: '1', age: 28, address: 'Shenzhen' },
-                { id: 10002, name: 'Test2', nickname: 'T2', role: 'Test', sex: '0', age: 22, address: 'Guangzhou' },
-                { id: 10003, name: 'Test3', nickname: 'T3', role: 'PM', sex: '1', age: 32, address: 'Shanghai' },
-                { id: 10004, name: 'Test4', nickname: 'T4', role: 'Designer', sex: '0', age: 23, address: 'Shenzhen' },
-                { id: 10005, name: 'Test5', nickname: 'T5', role: 'Develop', sex: '0', age: 30, address: 'Shanghai' },
-                { id: 10006, name: 'Test6', nickname: 'T6', role: 'Designer', sex: '0', age: 21, address: 'Shenzhen' },
-                { id: 10007, name: 'Test7', nickname: 'T7', role: 'Test', sex: '1', age: 29, address: 'Guangzhou' },
-                { id: 10008, name: 'Test8', nickname: 'T8', role: 'Develop', sex: '1', age: 35, address: 'Shenzhen' },
-                { id: 10009, name: 'Test9', nickname: 'T9', role: 'Test', sex: '1', age: 24, address: 'Shenzhen' },
-                { id: 100010, name: 'Test10', nickname: 'T10', role: 'Develop', sex: '0', age: 20, address: 'Guangzhou' }
-              ]
+        tableColumn:columns,
+        tableDatas:datas,
+        bookType: "xlsx",
+      filename: "export-demo",
+      sheet: [
+        {
+          title: "插件信息2",
+          table: datas,
+          columns,
+          sheetName: "插件信息2",
+          globalStyle: {
+            font: {
+              color: { rgb: "ff7e00" },
+            },
+          },
+          cellStyle: [
+            {
+              cell: "A1",
+              font: {
+                name: "宋体",
+                sz: 14,
+                color: { rgb: "ffffff" },
+                bold: true,
+              },
+              fill: {
+                fgColor: { rgb: "ff7e00" },
+              },
+            },
+          ],
+        },
+      ],
      }
    },
- methods:  {
-            formatterSex ({ cellValue }) {
-              if (cellValue === '1') {
-                return '男'
-              } else if (cellValue === '0') {
-                return '女'
-              }
-              return ''
-            },
-            async impotEvent () {
-              const { files } = await this.$refs.xGrid1.readFile({
-                types: ['xls', 'xlsx']
-              })
-              const fileReader = new FileReader()
-              fileReader.onload = (ev) => {
-                const data = ev.target.result
-                const workbook = XLSX.read(data, { type: 'binary' })
-                const csvData = XLSX.utils.sheet_to_csv(workbook.Sheets.Sheet1)
-                const tableData = []
-                // 解析数据
-                csvData.split('\n').forEach((vRow) => {
-                  if (vRow) {
-                    const vCols = vRow.split(',')
-                    const item = {}
-                    vCols.forEach((val, cIndex) => {
-                      const column = this.tableColumn[cIndex]
-                      if (column.field) {
-                        item[column.field] = val
-                      }
-                    })
-                    tableData.push(item)
-                  }
-                })
-                this.tableData1 = tableData
-              }
-              fileReader.readAsBinaryString(files[0])
-            },
+   created(){
+
+   },
+   methods:  {
+             /**
+              * @description: html 导出
+              * @param {*}
+              * @return {*}
+              */
+             exportEvent() {
+      this.$refs.xTable.exportData({
+        filename: 'export',
+        sheetName: 'Sheet1',
+        type: 'xlsx'
+      })
+       },
+
             // 通用行合并函数（将相同多列数据合并为一行）
             rowspanMethod ({ row, _rowIndex, column, visibleData }) {
               const fields = ['sex']
@@ -99,9 +99,28 @@ import exportExcel from "../tableExportExcel"
                 }
               }
             },
-   exportOut(){
-     exportExcel('xGrid2',this.tableColumn, this.tableDatas,"test")
-    }
+       exportOut(two){
+         debugger
+        const options = {
+        bookType: this.bookType,
+        filename: this.filename,
+        sheet: this.sheet,
+        onError: this.onError,
+      };
+      if (two==2) {
+        excelExportTwo(options)
+      }else{
+        excelExportOne(options);
+      }
+    },
+      /**
+     * @name: 导出错误
+     * @param {String} err/错误信息
+     * @return:
+     */
+    onError(err) {
+      console.log(err);
+    },
 
    }
  }
