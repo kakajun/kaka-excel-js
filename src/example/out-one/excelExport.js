@@ -1,7 +1,7 @@
 import { saveAs } from "file-saver";
 import XLSX from "pikaz-xlsx-style";
 import tableRows from '../tablerow.json';
-import {setCellStyle,excelDefault,getColWidth,getWs} from './excel-style.js';
+import {excelDefault,getColWidth,getWs} from './excel-style.js';
 import { getColumnsIds, getMultiHeader } from './excel-head';
 import {fillTableData,getDataAndmerges} from './excel-body';
 // 文件类型

@@ -8111,7 +8111,7 @@ vxe-table-plugin-export-xlsx@^2.2.2:
   resolved "https://registry.npmjs.org/vxe-table-plugin-export-xlsx/-/vxe-table-plugin-export-xlsx-2.2.2.tgz#d3cb80193973095db9ac758dd9902c81792a9ae7"
   integrity sha512-b6Z7LI8q7rXe7ZMuH9gr9JQimZ4a9QUqyh7/HPHm6NEtyEhYiNjd0FH9JorhXRaQEfOyuAUu0tiK6rOAEFvYXg==
 
-vxe-table@~3.4.12:
+vxe-table@^3.4.12:
   version "3.4.12"
   resolved "https://registry.npmjs.org/vxe-table/-/vxe-table-3.4.12.tgz#5c92de2fd6ec78e1cf6983ff6870b909d3f153e5"
   integrity sha512-0sPhh1GRA0xV8DtCloaqJ5QJ3vjPkHnfH/bZxu1EuyXVE/AZ+dtvYy8syqPevnsLTW9oL8CNTWOHl6WJUdmsuQ==

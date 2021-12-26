@@ -57,9 +57,9 @@ function setCellStyle(cell, cellObject, type) {
   };
   if (type === "header") cell.s = headerStyle;
   else cell.s = cellStyle;
- }
+}
 
- const excelDefault = {
+const excelDefault = {
   sheetName: "sheet",
   globalStyle: {
     border: {
@@ -101,20 +101,33 @@ function setCellStyle(cell, cellObject, type) {
 };
 
 /**
- * 根据第一行设置每列的宽度
- * @param row
+ * @desc    : 千分位分隔    例如: currency(value,2 ,'万元' )
+ * @param   {value}      要转的数值
+ * @param   {currency}   后面带的货币单位
+ * @param   {decimals}   小数位数
  */
-  function getColWidth(row) {
-  let cols = [];
-  row.forEach((r) => {
-    if (r.type === "string") cols.push({ wpx: 200 });
-    else if (r.type === "decimal") cols.push({ wpx: 100 });
-    else cols.push({ wpx: 150 });
-  });
-  return cols;
-  }
+function currencyF(value, decimals, currency) {
+  if (!value) value = 0;
+  const valuex = parseFloat(value);
+  if (!isFinite(valuex) || (!valuex && valuex !== 0)) return "";
+  currency = currency != null ? currency : "";
+  decimals = decimals != null ? decimals : 2;
+  const stringified = Math.abs(valuex).toFixed(decimals);
+  const _int = decimals ? stringified.slice(0, -1 - decimals) : stringified;
+  const i = _int.length % 3;
+  const head = i > 0 ? _int.slice(0, i) + (_int.length > 3 ? "," : "") : "";
+  const _float = decimals ? stringified.slice(-1 - decimals) : "";
+  const sign = valuex < 0 ? "-" : "";
+  return (
+    sign +
+    head +
+    _int.slice(i).replace(/(\d{3})(?=\d)/g, "$1,") +
+    _float +
+    currency
+  );
+}
 
-  /**
+/**
  * @name: 转化时间格式
  * @param {type}
  * @return:
@@ -125,12 +138,14 @@ function datenum(v, date1904) {
   return (epoch - new Date(Date.UTC(1899, 11, 30))) / (24 * 60 * 60 * 1000);
 }
 
-  /**
+/**
  * @description: 设置数据类型
- * @param {*} data
+ * @param {*} data           数据
+ * @param {*} cloums        列头
+ * @param {*} currencyType   转换单位
  * @return {*}
  */
-function getWs(data,cloums) {
+function getWs(data, cloums, currencyType, headNum) {
   var ws = {};
   var range = { s: { c: 10000000, r: 10000000 }, e: { c: 0, r: 0 } };
   for (var R = 0; R != data.length; ++R) {
@@ -138,28 +153,95 @@ function getWs(data,cloums) {
     for (var C = 0; C != data[R].length; ++C) {
       // 列
       var cellObject = cloums[C];
-      debugger
+      debugger;
       if (range.s.r > R) range.s.r = R;
       if (range.s.c > C) range.s.c = C;
       if (range.e.r < R) range.e.r = R;
       if (range.e.c < C) range.e.c = C;
       let value = data[R][C];
-      if (cellObject&&cellObject.type === "decimal" && (value === 0||value =='null'))
-        value = "--";
+      if (cellObject.type === "decimal") {
+        if (value === 0 || value == "null") value = "--";
+        else value = currencyF(value / currencyType);
+      }
+
       var cell = { v: value };
       if (cell.v == null) continue;
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
-       if (typeof cell.v === "number") cell.t = "n";
-      else if (typeof cell.v === "boolean") cell.t = "b";
+      // if (typeof cell.v === "number") cell.t = "n";
+      if (typeof cell.v === "boolean") cell.t = "b";
       else if (cell.v instanceof Date) {
         cell.t = "n";
         cell.z = XLSX.SSF._table[14];
         cell.v = datenum(cell.v);
-      } else cell.t = "s";  // 素有单元格都设置成文字类型
+      } else cell.t = "s"; // 素有单元格都设置成文字类型
+      setCellStyle(cell, cellObject, R < headNum ? "header" : "content");
       ws[cell_ref] = cell;
     }
   }
   if (range.s.c < 10000000) ws["!ref"] = XLSX.utils.encode_range(range);
   return ws;
 }
-export{getColWidth,excelDefault,setCellStyle,getWs}
+
+/**
+ * @description: 返回自定义列宽或者自适应
+ * @param {*} colWidth       自定义的列宽
+ * @param {*} data           数据
+ * @param {*} globalStyle    全局样式
+ * @return {*}
+ */
+function setColWidth(colWidth, data, globalStyle) {
+  let result;
+  // 如果没有列宽则自适应
+  if (!colWidth) {
+    // 基准比例，以12为标准
+    const benchmarkRate =
+      (globalStyle.font.sz && globalStyle.font.sz / 12) || 1;
+    // 空字符长度
+    const nullstr = 10 * benchmarkRate + 2;
+    // 单个中文字符长度
+    const chinese = 2 * benchmarkRate;
+    // 单个非中文字符长度
+    const nChinese = benchmarkRate;
+    //设置worksheet每列的最大宽度,并+2调整一点列宽
+    const sheetColWidth = data.map((row) =>
+      row.map((val) => {
+        //先判断是否为null/undefined
+        if (!val) {
+          return {
+            wch: nullstr,
+          };
+        } else {
+          const strArr = val.toString().split("");
+          const pattern = new RegExp("[\u4E00-\u9FA5]+");
+          let re = strArr.map((str) => {
+            // 是否为中文
+            if (pattern.test(str)) {
+              return chinese;
+            } else {
+              return nChinese;
+            }
+          });
+          re = re.reduce((total, r) => total + r, 0);
+          return {
+            wch: re + 2,
+          };
+        }
+      })
+    );
+    /*以第一行为初始值*/
+    result = sheetColWidth[0];
+    for (let i = 1; i < sheetColWidth.length; i++) {
+      for (let j = 0; j < sheetColWidth[i].length; j++) {
+        if (result[j]["wch"] < sheetColWidth[i][j]["wch"]) {
+          result[j]["wch"] = sheetColWidth[i][j]["wch"];
+        }
+      }
+    }
+  } else {
+    result = colWidth.map((i) => {
+      return { wch: i };
+    });
+  }
+  return result;
+}
+export { excelDefault, getWs, setColWidth };
