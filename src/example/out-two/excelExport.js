@@ -1,7 +1,19 @@
 import { saveAs } from "file-saver";
 import XLSX from "pikaz-xlsx-style";
-import { excelDefault, getWs, setColWidth } from "./excel-style.js";
-import { getColumnsIds, getMultiHeader } from "./excel-head";
+import {
+  excelDefault,
+  getWs,
+  setColWidth,
+  setSingleCell,
+} from "./excel-style.js";
+import {
+  getColumnsIds,
+  numberToCellCode,
+  setTitleMerges,
+  getLevels,
+  setMerges,
+  setCellCode,
+} from "./excel-head";
 import { fillTableData, getDataAndmerges } from "./excel-body";
 // 文件类型
 const excelEnum = {
@@ -18,7 +30,6 @@ const excelEnum = {
  * @return:
  */
 export default function exportExcel(options) {
-  debugger;
   const {
     bookType = "xlsx",
     filename = "excel",
@@ -58,17 +69,23 @@ export default function exportExcel(options) {
       // 单元格样式
       cellStyle,
     } = item;
-
-    const { nodes, isColgroup } = getColumnsIds(columns);
+    const nodes = getColumnsIds(columns);
     const keys = nodes.map((item) => item.field);
-    const tHeader = nodes.map((item) => item.names);
+    const tHeader = nodes.map((item) => item.title);
+
+    // 获取最大层级
+    setCellCode(columns, null, null);
+    // 最大层级集合
+    const allLevels = getLevels(columns, null);
+    console.log(columns, "columns");
+    // 获取最大层级
+    const maxLevel = Math.max(...allLevels);
+    const setMergesObj = setMerges(columns, maxLevel, merges, title);
     // 多级表头
-    let multiHeader = [];
-    let headNum = 1;
-    if (isColgroup) {
-      multiHeader = getMultiHeader();
-      headNum = 1 + multiHeader.length;
-    }
+    let multiHeader = setMergesObj.multiHeader;
+    merges = setMergesObj.merges;
+    console.log(merges, "mmmmmmm");
+    // console.log(multiHeader, merges, "merges");
     sheetName = sheetName || excelDefault.sheetName;
     // 默认全局样式覆盖
     const dgStyle = excelDefault.globalStyle;
@@ -92,63 +109,19 @@ export default function exportExcel(options) {
       );
       // 第一个元素为title，剩余以空字符串填充
       title = [title].concat(Array(titleLength - 1).fill(""));
-      // 处理标题的合并\
-      const cell = [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
-        "H",
-        "I",
-        "J",
-        "K",
-        "L",
-        "M",
-        "N",
-        "O",
-        "P",
-        "Q",
-        "R",
-        "S",
-        "T",
-        "U",
-        "V",
-        "W",
-        "X",
-        "Y",
-        "Z",
-      ];
-      let mergeSecond = "A1";
-      if (titleLength > 26) {
-        const one = parseInt(titleLength / 26);
-        const two = titleLength % 26;
-        mergeSecond = cell[one - 1] + cell[two - 1] + "1";
-      } else {
-        mergeSecond = cell[titleLength - 1] + "1";
-      }
-      const titleMerge = `A1:${mergeSecond}`;
-      if (!merges) {
-        merges = [titleMerge];
-      } else {
-        if (merges.indexOf(titleMerge) === -1) {
-          merges.push(titleMerge);
-        }
-      }
+      // 处理标题的合并
+      merges = setTitleMerges(titleLength, merges);
     }
     //表头对应字段
     let data = table.map((v) => keys.map((j) => v[j]));
     // 多级表头
     if (multiHeader) {
       // 倒序循环
-      for (let i = multiHeader.length - 1; i >= 0; i--) {
-        data.unshift(multiHeader[i]);
-      }
+      data.unshift(...multiHeader);
     }
-    tHeader && data.unshift(tHeader);
     title && data.unshift(title);
+    // 有标题的话,表头多一行
+    const headNum = title ? maxLevel + 2 : maxLevel + 1;
     let ws = getWs(data, nodes, currencyType, headNum);
     if (merges && merges.length > 0) {
       if (!ws["!merges"]) ws["!merges"] = [];
@@ -156,27 +129,14 @@ export default function exportExcel(options) {
         ws["!merges"].push(XLSX.utils.decode_range(merge));
       });
     }
-
+    // 设置列宽
     ws["!cols"] = setColWidth(colWidth, data, globalStyle);
     // 添加工作表
     wb.SheetNames.push(sheetName);
     wb.Sheets[sheetName] = ws;
     let dataInfo = wb.Sheets[wb.SheetNames[index]];
     // 单个样式
-    (function () {
-      if (!cellStyle || cellStyle.length <= 0) {
-        return;
-      }
-      cellStyle.forEach((s) => {
-        const { border, font, alignment, fill } = s;
-        dataInfo[s.cell].s = {
-          border: border === {} ? border : border || globalStyle.border,
-          font: font || globalStyle.font,
-          alignment: alignment || globalStyle.alignment,
-          fill: fill || globalStyle.fill,
-        };
-      });
-    })();
+    setSingleCell(cellStyle, dataInfo, globalStyle);
   });
   // 类型默认为xlsx
   let bookType2 =

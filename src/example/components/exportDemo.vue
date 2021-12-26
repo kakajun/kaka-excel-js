@@ -37,6 +37,7 @@ export default {
           title: "插件信息2",
           table: datas,
           columns,
+          //  multiHeader: [['基础信息', '', '', '详细信息'], ['作者', '语言', '插件名称', '插件用途']],
           sheetName: "插件信息2",
           currencyType: 10000,
           globalStyle: {
@@ -46,7 +47,7 @@ export default {
           },
           cellStyle: [
             {
-              cell: "A1",
+              cell: "A7",
               font: {
                 name: "宋体",
                 sz: 14,

@@ -50,7 +50,8 @@ function setCellStyle(cell, cellObject, type) {
     },
     alignment: {
       // 是否居中center | 左对齐left | 右对齐right
-      horizontal: cellObject.type === "decimal" ? "right" : "left",
+      horizontal:
+        cellObject.type && cellObject.type === "decimal" ? "right" : "left",
       vertical: "center",
     },
     border: border_s,
@@ -153,13 +154,17 @@ function getWs(data, cloums, currencyType, headNum) {
     for (var C = 0; C != data[R].length; ++C) {
       // 列
       var cellObject = cloums[C];
-      debugger;
       if (range.s.r > R) range.s.r = R;
       if (range.s.c > C) range.s.c = C;
       if (range.e.r < R) range.e.r = R;
       if (range.e.c < C) range.e.c = C;
       let value = data[R][C];
-      if (cellObject.type === "decimal") {
+      if (
+        cellObject &&
+        cellObject.type &&
+        cellObject.type === "decimal" &&
+        R > headNum
+      ) {
         if (value === 0 || value == "null") value = "--";
         else value = currencyF(value / currencyType);
       }
@@ -179,6 +184,7 @@ function getWs(data, cloums, currencyType, headNum) {
     }
   }
   if (range.s.c < 10000000) ws["!ref"] = XLSX.utils.encode_range(range);
+  console.log(headNum, "ws");
   return ws;
 }
 
@@ -244,4 +250,26 @@ function setColWidth(colWidth, data, globalStyle) {
   }
   return result;
 }
-export { excelDefault, getWs, setColWidth };
+
+/**
+ * @description: 单个样式设置
+ * @param {*} cellStyle
+ * @param {*} dataInfo
+ * @param {*} globalStyle
+ * @return {*}
+ */
+function setSingleCell(cellStyle, dataInfo, globalStyle) {
+  if (!cellStyle || cellStyle.length <= 0) {
+    return;
+  }
+  cellStyle.forEach((s) => {
+    const { border, font, alignment, fill } = s;
+    dataInfo[s.cell].s = {
+      border: border === {} ? border : border || globalStyle.border,
+      font: font || globalStyle.font,
+      alignment: alignment || globalStyle.alignment,
+      fill: fill || globalStyle.fill,
+    };
+  });
+}
+export { excelDefault, getWs, setColWidth, setSingleCell };
