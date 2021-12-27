@@ -166,9 +166,15 @@ function getWs(data, cloums, currencyType, headNum) {
         R > headNum
       ) {
         if (value === 0 || value == "null") value = "--";
-        else value = currencyF(value / currencyType);
+        else {
+          if ((cellObject.title||cellObject.text).indexOf('%')) {
+               // 如果列头包含'%',不做单位转换处理
+          } else {
+            // 单位转换
+               value = currencyF(value / currencyType);
+          }
+        }
       }
-
       var cell = { v: value };
       if (cell.v == null) continue;
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });

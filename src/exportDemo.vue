@@ -37,6 +37,7 @@ export default {
           table: datas,
           columns,
           sheetName: "XX统计表",
+          // 这个是数值转换单位,传10000转换为万元
           currencyType: 10000,
           globalStyle: {
             font: {
