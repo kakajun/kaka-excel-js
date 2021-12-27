@@ -1,11 +1,16 @@
-/*
- * @Author: zouzheng
- * @Date: 2020-05-08 14:06:58
- * @LastEditors: zouzheng
- * @LastEditTime: 2020-05-08 14:15:30
- * @Description: 这是XXX组件（页面）
- */
-module.exports = {
+
+// console.log(process.title);
+const config= {
   publicPath: "./",
-  productionSourceMap: false
-};
+  productionSourceMap: false,
+}
+// 只有在打包lib时才忽略,否则dev时会报错
+if (process.title.indexOf('lib')>-1) {
+config.configureWebpack={
+    externals: {
+        'pikaz-xlsx-style': 'pikaz-xlsx-style',
+       'file-saver':'file-saver'
+    }
+  }
+}
+module.exports= config;

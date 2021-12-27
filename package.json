@@ -1,13 +1,14 @@
 {
   "name": "kaka-excel-js",
   "version": "0.0.1",
-  "description": "A Excel Component for Vue.js",
+  "description": "A tool for exporting excel from the front",
   "private": false,
-  "main": "lib/index.umd.min.js",
+  "main": "lib/kakaExcelJs.umd.js",
+  "unpkg": "lib/kakaExcelJs.umd.min.js",
   "keywords": [
-    "excel",
-    "vue",
-    "components"
+   "excel",
+    "table",
+    "xlsx"
   ],
   "files": [
     "lib",
@@ -17,9 +18,8 @@
   "author": "pikaz",
   "scripts": {
     "dev": "vue-cli-service serve src/main.js",
-    "example": "vue-cli-service build --dest example src/main.js",
-    "lib": "vue-cli-service build --target lib --name kaka-excel-js --dest lib src/plugin/index.js",
-    "build": "vue-cli-service build --target lib --name kaka-excel-js --dest lib src/plugin/index.js && vue-cli-service build --dest example src/main.js"
+    "lib": "vue-cli-service build --target lib --name kakaExcelJs --dest lib src/out/index.js",
+    "build": "vue-cli-service build --dest dist src/main.js"
   },
   "repository": {
     "type": "git",
