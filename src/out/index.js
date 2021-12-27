@@ -8,13 +8,12 @@ import {
 } from "./excel-style.js";
 import {
   getColumnsIds,
-  numberToCellCode,
   setTitleMerges,
   getLevels,
   setMerges,
   setCellCode,
 } from "./excel-head";
-import { fillTableData, getDataAndmerges } from "./excel-body";
+// import { fillTableData, getDataAndmerges } from "./excel-body";
 // 文件类型
 const excelEnum = {
   bookType: ["xlsx", "xls"],

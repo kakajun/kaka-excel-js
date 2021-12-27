@@ -1,13 +1,6 @@
-<!--
- * @Author: zouzheng
- * @Date: 2020-04-30 11:23:12
- * @LastEditors: zouzheng
- * @LastEditTime: 2020-06-15 18:06:41
- * @Description: 这是XXX组件（页面）
- -->
 ## Introduction
 
-这个项目是在工作中并没有找到一个开箱即用的excel导入导出插件，js里比较知名的[xlsx](https://github.com/SheetJS/sheetjs.git)插件免费版没办法修改样式，而[xlsx-style](https://github.com/protobi/js-xlsx.git)插件需要修改源码，都比较麻烦，所以在xlsx和xlsx-style的基础上做了简单的封装，做到开箱即用，降低使用成本。
+这个插件解决一个前端导出上万条数据, 如果都渲染出来, 页面会卡死, 如果分页导出, 又有一个需要合并的问题, 所以这边在结合git上的一些开源项目的基础上进行二次封装, 使得表格数据只需要请求后端接口数据, 不展示所有数据的基础上进行简单的封装，做到开箱即用，降低使用成本。
 
 ## Features
 
@@ -20,7 +13,7 @@
 
 ## Installation
 
-### With npm or yarn 
+### With npm or yarn
 
 ```bash
 yarn add pikaz-excel-js

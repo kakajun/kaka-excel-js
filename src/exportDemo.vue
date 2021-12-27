@@ -1,11 +1,11 @@
 <template>
-  <div id="xGrid2">
-    <vxe-toolbar>
+  <div >
+     <vxe-toolbar>
       <template v-slot:buttons>
-        <vxe-button @click="exportEvent">导出.xlsx</vxe-button>
+        <vxe-button @click="exportEvent">导出xlsxBy pugin</vxe-button>
+        <vxe-button @click="exportOut">导出demo</vxe-button>
       </template>
     </vxe-toolbar>
-    <vxe-button @click="exportOut">导出demo</vxe-button>
 
     <vxe-grid
       border
@@ -19,11 +19,10 @@
 </template>
 
 <script>
-import { columns, datas } from "../mock.js";
-import excelExport from "../out/excelExport";
-
+import { columns, datas } from "./mock.js";
+import excelExport from "./out";
 export default {
-  name: "",
+  name: "exportDemo",
   components: {},
   data() {
     return {
@@ -33,11 +32,10 @@ export default {
       filename: "export-demo",
       sheet: [
         {
-          title: "插件信息2",
+          title: "XX统计表",
           table: datas,
           columns,
-          //  multiHeader: [['基础信息', '', '', '详细信息'], ['作者', '语言', '插件名称', '插件用途']],
-          sheetName: "插件信息2",
+          sheetName: "XX统计表",
           currencyType: 10000,
           globalStyle: {
             font: {
