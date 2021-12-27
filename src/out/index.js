@@ -69,8 +69,8 @@ export default function exportExcel(options) {
       cellStyle,
     } = item;
     const nodes = getColumnsIds(columns);
-    const keys = nodes.map((item) => item.field);
-    const tHeader = nodes.map((item) => item.title);
+    const keys = nodes.map((item) => item.field||item.id);
+    const tHeader = nodes.map((item) => item.title||item.text);
 
     // 获取最大层级
     setCellCode(columns, null, null);

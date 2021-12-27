@@ -12,7 +12,7 @@ function getColumnsIds(columns, keys) {
     if (obj.children) {
       getColumnsIds(obj.children, nodes);
     } else {
-      if (obj.field) {
+      if (obj.field||obj.id) {
         // 直接把整个对象push进去
         nodes.push(obj);
       }
@@ -162,7 +162,7 @@ function setMerges(
     const level = li.level + 1;
     const cellIndex = li.CellIndex - 1;
     const CellCode = li.CellCode;
-    const cellTitle = li.title;
+    const cellTitle = li.title||li.text;
     const colSpan = getColSpan(li);
     const rowSpan = getRowSpan(li, maxLevel);
     li.colSpan = colSpan;

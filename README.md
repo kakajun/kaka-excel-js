@@ -4,6 +4,19 @@
 
 基于[pikaz-xlsx-style](https://github.com/pikaz-18/pikaz-xlsx-style)进行再次封装,
 
+其中支持cloums, vxe的fileld和title搭配, 如果没有fileld就用id字段, 如果没有title就取text字段, 以匹配不同公司字段取名规则
+```js
+ {
+    field: "bankname",
+    title: "关联公司",
+    type: "string",
+    align: "left",
+    fixed: true,
+    width: "226px",
+    automaticLine: false,
+  }
+```
+
 具体使用方法参见[pikaz-excel-js](https://github.com/pikaz-18/pikaz-excel-js.git)
 
 不足: 由于pikaz-xlsx-style打包的是umd格式, 并不支持在vite中用esm方式加载, 暂时只能在webpack或vue-cli 中使用
