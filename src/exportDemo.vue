@@ -10,7 +10,7 @@
     <vxe-grid
       border
       ref="xTable"
-      height="300"
+      height="600"
       :span-method="rowspanMethod"
       :columns="tableColumn"
       :data="tableDatas"

@@ -13,7 +13,11 @@ import {
   setMerges,
   setCellCode,
 } from "./excel-head";
-// import { fillTableData, getDataAndmerges } from "./excel-body";
+
+import createDebugger from 'debug'
+const debug = createDebugger('excel-style')
+  debug.enabled = true
+
 // 文件类型
 const excelEnum = {
   bookType: ["xlsx", "xls"],
@@ -29,6 +33,7 @@ const excelEnum = {
  * @return:
  */
 export default function exportExcel(options) {
+
   const {
     bookType = "xlsx",
     filename = "excel",
@@ -48,6 +53,7 @@ export default function exportExcel(options) {
   }
   const wb = Workbook();
   sheet.forEach((item, index) => {
+
     let {
       // 标题
       title,
@@ -76,15 +82,15 @@ export default function exportExcel(options) {
     setCellCode(columns, null, null);
     // 最大层级集合
     const allLevels = getLevels(columns, null);
-    console.log(columns, "columns");
+    debug(`columns: ${columns}`)
     // 获取最大层级
     const maxLevel = Math.max(...allLevels);
     const setMergesObj = setMerges(columns, maxLevel, merges, title);
     // 多级表头
     let multiHeader = setMergesObj.multiHeader;
     merges = setMergesObj.merges;
-    console.log(merges, "mmmmmmm");
-    // console.log(multiHeader, merges, "merges");
+    debug(`merges: ${merges}`)
+    debug(`multiHeader: ${multiHeader}`)
     sheetName = sheetName || excelDefault.sheetName;
     // 默认全局样式覆盖
     const dgStyle = excelDefault.globalStyle;
@@ -126,6 +132,7 @@ export default function exportExcel(options) {
       if (!ws["!merges"]) ws["!merges"] = [];
       merges.forEach((merge) => {
         ws["!merges"].push(XLSX.utils.decode_range(merge));
+
       });
     }
     // 设置列宽
@@ -135,13 +142,14 @@ export default function exportExcel(options) {
     wb.Sheets[sheetName] = ws;
     let dataInfo = wb.Sheets[wb.SheetNames[index]];
     // 单个样式
-    setSingleCell(cellStyle, dataInfo, globalStyle);
+       setSingleCell(cellStyle, dataInfo, globalStyle);
   });
   // 类型默认为xlsx
   let bookType2 =
     excelEnum.bookType.filter((i) => i === bookType)[0] ||
     excelEnum.bookType[0];
   writeExcel(wb, bookType2, filename, beforeExport);
+
 }
 /**
  * @name: workbook对象

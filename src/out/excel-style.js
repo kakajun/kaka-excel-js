@@ -1,4 +1,7 @@
 import XLSX from "pikaz-xlsx-style";
+import createDebugger from 'debug'
+const debug = createDebugger('excel-style')
+debug.enabled = true
 /**
  * 设置单元格样式
  * @param cell
@@ -148,10 +151,12 @@ function datenum(v, date1904) {
  */
 function getWs(data, cloums, currencyType, headNum) {
   var ws = {};
+  const clen = cloums.length
+ const dlen = data.length
   var range = { s: { c: 10000000, r: 10000000 }, e: { c: 0, r: 0 } };
-  for (var R = 0; R != data.length; ++R) {
+  for (var R = 0; R != dlen; ++R) {
     // 行
-    for (var C = 0; C != data[R].length; ++C) {
+    for (var C = 0; C < clen; C++) {
       // 列
       var cellObject = cloums[C];
       if (range.s.r > R) range.s.r = R;
@@ -163,15 +168,17 @@ function getWs(data, cloums, currencyType, headNum) {
         cellObject &&
         cellObject.type &&
         cellObject.type === "decimal" &&
-        R > headNum
+        R > headNum-1
       ) {
+
         if (value === 0 || value == "null") value = "--";
         else {
-          if ((cellObject.title||cellObject.text).indexOf('%')) {
-               // 如果列头包含'%',不做单位转换处理
+          if (cellObject.unit) {
+               // 如果列头包含'%'等,直接加到后面
+              value=value+cellObject.unit
           } else {
             // 单位转换
-               value = currencyF(value / currencyType);
+            value = currencyF(value / currencyType);
           }
         }
       }
@@ -190,7 +197,7 @@ function getWs(data, cloums, currencyType, headNum) {
     }
   }
   if (range.s.c < 10000000) ws["!ref"] = XLSX.utils.encode_range(range);
-  console.log(headNum, "ws");
+  debug(`ws ${headNum} `)
   return ws;
 }
 
@@ -268,14 +275,15 @@ function setSingleCell(cellStyle, dataInfo, globalStyle) {
   if (!cellStyle || cellStyle.length <= 0) {
     return;
   }
-  cellStyle.forEach((s) => {
-    const { border, font, alignment, fill } = s;
+  for (let index = 0; index < cellStyle.length; index++) {
+    const s = cellStyle[index];
+   const { border, font, alignment, fill } = s;
     dataInfo[s.cell].s = {
       border: border === {} ? border : border || globalStyle.border,
       font: font || globalStyle.font,
       alignment: alignment || globalStyle.alignment,
       fill: fill || globalStyle.fill,
     };
-  });
+  }
 }
 export { excelDefault, getWs, setColWidth, setSingleCell };

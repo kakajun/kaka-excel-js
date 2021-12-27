@@ -1,3 +1,6 @@
+import createDebugger from 'debug'
+const debug = createDebugger('excel-head')
+debug.enabled = true
 /**
  * @description: 递归获取头部所有id
  * @param {*} columns
@@ -30,7 +33,8 @@ let CURRENT_CELL_INDEX = 0;
  */
 function setCellCode(columns, parentNode) {
   const levels = [];
-  columns.forEach((li, index) => {
+  for (let index = 0; index < columns.length; index++) {
+    const li = columns[index];
     if (!CURRENT_CELL_INDEX) {
       CURRENT_CELL_INDEX = 1;
     } else {
@@ -45,7 +49,7 @@ function setCellCode(columns, parentNode) {
     if (children && children.length > 0) {
       setCellCode(children, li);
     }
-  });
+  }
   return levels;
 }
 //转换数字到EXCEL单元格编号
@@ -68,15 +72,17 @@ function numberToCellCode(number) {
  */
 function getLevels(columns, parentNode) {
   const levels = [];
-  columns.forEach((li, index) => {
-    li.level = parentNode ? parentNode.level + 1 : 0;
+  for (let index = 0; index < columns.length; index++) {
+    const li = columns[index];
+   li.level = parentNode ? parentNode.level + 1 : 0;
     levels.push(li.level);
     const children = li.children;
     if (children && children.length > 0) {
       const result = getLevels(children, li);
       levels.push(...result);
     }
-  });
+  }
+
   return levels;
 }
 /**
@@ -158,7 +164,8 @@ function setMerges(
   multiHeader = []
 ) {
   // 如果有title,那么所有行都要下移一个单位,也就是merge的索引第一位都要+1
-  columns.forEach((li, index) => {
+  for (let index = 0; index < columns.length; index++) {
+    const li = columns[index];
     const level = li.level + 1;
     const cellIndex = li.CellIndex - 1;
     const CellCode = li.CellCode;
@@ -176,7 +183,8 @@ function setMerges(
           title ? level + rowSpan : level + rowSpan - 1
         }`
       );
-      console.log(merges);
+
+      debug(`rowSpan > 1 ${merges}`);
       multiHeader[level - 1][cellIndex] = cellTitle;
       for (let i = 1; i < rowSpan; i++) {
         if (!multiHeader[level - 1 + i]) {
@@ -195,20 +203,19 @@ function setMerges(
         emptyCell.push("");
       }
       const endCellCode = numberToCellCode(endCellIndex);
-      console.log(CellCode, endCellCode);
       multiHeader[level - 1].splice(cellIndex + 1, 0, ...emptyCell);
       merges.push(
         `${CellCode}${title ? level + 1 : level}:${endCellCode}${
           title ? level + 1 : level
         }`
       );
-      console.log(merges);
+       debug(`colSpan > 1 ${merges}`);
     }
     const children = li.children;
     if (children && children.length > 0) {
       setMerges(children, maxLevel, merges, title, multiHeader);
     }
-  });
+  }
   return { multiHeader, merges };
 }
 
