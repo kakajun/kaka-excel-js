@@ -9,7 +9,8 @@ if (process.title.indexOf('lib')>-1) {
 config.configureWebpack={
     externals: {
         'pikaz-xlsx-style': 'pikaz-xlsx-style',
-       'file-saver':'file-saver'
+    'file-saver': 'file-saver',
+       "debug":'debug'
     }
   }
 }
