@@ -2,6 +2,8 @@
 
 这个插件解决一个前端导出上万条数据, 如果都渲染出来, 页面会卡死, 如果分页导出, 又有一个需要合并的问题, 所以这边在结合git上的一些开源项目的基础上进行二次封装, 使得表格数据只需要请求后端接口数据, 不展示所有数据的基础上进行简单的封装，做到开箱即用，降低使用成本。
 
+如果是页面渲染出来后导出,vxe-table-plugin-export-xlsx是个不错的选择
+
 基于[pikaz-xlsx-style](https://github.com/pikaz-18/pikaz-xlsx-style)进行再次封装,
 
 其中支持cloums, vxe的fileld和title搭配, 如果没有fileld就用id字段, 如果没有title就取text字段, 以匹配不同公司字段取名规则
@@ -16,6 +18,7 @@
     automaticLine: false,
   }
 ```
+
 
 具体使用方法参见[pikaz-excel-js](https://github.com/pikaz-18/pikaz-excel-js.git)
 

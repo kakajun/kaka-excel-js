@@ -42,8 +42,7 @@
     "gh-pages": "^3.2.3",
     "kaka-excel-js": "^0.0.1",
     "vue-template-compiler": "^2.6.11",
-    "vxe-table": "^3.4.12",
-    "xe-utils": "^3.5.1"
+    "vxe-table": "^3.4.12"
   },
   "browserslist": [
     "> 1%",
