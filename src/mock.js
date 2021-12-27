@@ -23,12 +23,7 @@ const columns = [
         field: "B",
         title: "坏账准备",
         type: "decimal",
-      },
-      {
-        field: "k",
-        title: "坏账准备2",
-        type: "decimal",
-      },
+      }
     ],
   },
   {
