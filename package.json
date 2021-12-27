@@ -39,11 +39,9 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
-    "exceljs": "^4.3.0",
     "vue-template-compiler": "^2.6.11",
     "vxe-table": "^3.4.12",
-    "vxe-table-plugin-export-xlsx": "^2.2.2",
-    "xe-utils": "^3.5.1"
+    "gh-pages": "^3.2.3"
   },
   "browserslist": [
     "> 1%",
