@@ -1,11 +1,7 @@
 
 <template>
   <div id="app">
-    <div class="header">
-      <img class="logo" src="./assets/img/logo.png" />
-    </div>
     <div class="demo">
-
       <export-demo></export-demo>
     </div>
   </div>
@@ -44,7 +40,7 @@ export default {
 }
 .demo {
   margin: 20px 0;
-  width: 1200px;
+  width: 1600px;
 }
 .demo > h3 {
   margin-bottom: 20px;

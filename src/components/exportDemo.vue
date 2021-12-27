@@ -5,8 +5,8 @@
         <vxe-button @click="exportEvent">导出.xlsx</vxe-button>
       </template>
     </vxe-toolbar>
-    <vxe-button @click="exportOut">导出demoOne</vxe-button>
-    <vxe-button @click="exportOut(2)">导出demoTwo</vxe-button>
+    <vxe-button @click="exportOut">导出demo</vxe-button>
+
     <vxe-grid
       border
       ref="xTable"
@@ -20,8 +20,7 @@
 
 <script>
 import { columns, datas } from "../mock.js";
-import excelExportOne from "../out-one/excelExport";
-import excelExportTwo from "../out-two/excelExport";
+import excelExport from "../out/excelExport";
 
 export default {
   name: "",
@@ -100,18 +99,13 @@ export default {
       }
     },
     exportOut(two) {
-      debugger;
       const options = {
         bookType: this.bookType,
         filename: this.filename,
         sheet: this.sheet,
         onError: this.onError,
       };
-      if (two == 2) {
-        excelExportTwo(options);
-      } else {
-        excelExportOne(options);
-      }
+      excelExport(options);
     },
     /**
      * @name: 导出错误
