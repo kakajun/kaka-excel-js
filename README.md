@@ -33,6 +33,7 @@ npm i -S pikaz-excel-js file-saver kaka-excel-js
 ```
 ## demo
 
+[演示](https://kakajun.github.io/kaka-excel-js/)
 
 ## Reference
 [https://www.jianshu.com/p/31534691ed53](https://www.jianshu.com/p/31534691ed53)
