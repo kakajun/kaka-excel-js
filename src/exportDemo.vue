@@ -20,8 +20,8 @@
 
 <script>
 import { columns, datas } from "./mock.js";
-import excelExport from "./out";
-// import excelExport from "../lib/kakaExcelJs.umd.js";
+// import excelExport from "./out";
+import excelExport from "../lib/kakaExcelJs.umd.js";
 export default {
   name: "exportDemo",
   components: {},

@@ -1,6 +1,6 @@
 {
   "name": "kaka-excel-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A tool for exporting excel from the front",
   "private": false,
   "main": "lib/kakaExcelJs.umd.js",
@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "vue-cli-service serve src/main.js",
     "lib": "vue-cli-service build --target lib --name kakaExcelJs --dest lib src/out/index.js",
-    "build": "vue-cli-service build --dest dist src/main.js"
+    "build": "npm run lib && vue-cli-service build --dest dist src/main.js"
   },
   "repository": {
     "type": "git",
