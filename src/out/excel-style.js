@@ -1,7 +1,9 @@
 import XLSX from "pikaz-xlsx-style";
 import createDebugger from "debug";
 const debug = createDebugger("excel-style");
-debug.enabled = true;
+if (process.env==='development') {
+debug.enabled = true
+}
 /**
  * 设置单元格样式
  * @param cell

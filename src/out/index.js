@@ -16,8 +16,9 @@ import {
 
 import createDebugger from 'debug'
 const debug = createDebugger('index')
-  debug.enabled = true
-
+if (process.env==='development') {
+debug.enabled = true
+}
 // 文件类型
 const excelEnum = {
   bookType: ["xlsx", "xls"],
