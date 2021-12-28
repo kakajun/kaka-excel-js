@@ -125,9 +125,7 @@ export default function exportExcel(options) {
       data.unshift(...multiHeader);
     }
     title && data.unshift(title);
-    // 有标题的话,表头多一行
-    const headNum = title ? maxLevel + 2 : maxLevel + 1;
-    let ws = getWs(data, nodes, currencyType, headNum);
+    let ws = getWs(data, nodes, currencyType, maxLevel + 1,title);
     if (merges && merges.length > 0) {
       if (!ws["!merges"]) ws["!merges"] = [];
       merges.forEach((merge) => {

@@ -1,7 +1,7 @@
 import XLSX from "pikaz-xlsx-style";
-import createDebugger from 'debug'
-const debug = createDebugger('excel-style')
-debug.enabled = true
+import createDebugger from "debug";
+const debug = createDebugger("excel-style");
+debug.enabled = true;
 /**
  * 设置单元格样式
  * @param cell
@@ -149,10 +149,14 @@ function datenum(v, date1904) {
  * @param {*} currencyType   转换单位
  * @return {*}
  */
-function getWs(data, cloums, currencyType, headNum) {
+function getWs(data, cloums, currencyType, headNum,title) {
+  if (title) {
+        // 有标题的话,表头多一行
+     headNum =headNum + 1;
+  }
   var ws = {};
-  const clen = cloums.length
- const dlen = data.length
+  const clen = cloums.length;
+  const dlen = data.length;
   var range = { s: { c: 10000000, r: 10000000 }, e: { c: 0, r: 0 } };
   for (var R = 0; R != dlen; ++R) {
     // 行
@@ -168,14 +172,14 @@ function getWs(data, cloums, currencyType, headNum) {
         cellObject &&
         cellObject.type &&
         cellObject.type === "decimal" &&
-        R > headNum-1
+        R > headNum - 1
       ) {
-
-        if (value === 0 || value == "null") value = "--";
+        debug(`R ${R} `);
+        if (!value || value === 0 || value == "null") value = "--";
         else {
           if (cellObject.unit) {
-               // 如果列头包含'%'等,直接加到后面
-              value=value+cellObject.unit
+            // 如果列头包含'%'等,直接加到后面
+            value = value + cellObject.unit;
           } else {
             // 单位转换
             value = currencyF(value / currencyType);
@@ -183,7 +187,8 @@ function getWs(data, cloums, currencyType, headNum) {
         }
       }
       var cell = { v: value };
-      if (cell.v == null) continue;
+      // 这里如果是null那么要把null置空,否则真会出现null在表格中
+      if (cell.v == null) cell.v = "";
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
       // if (typeof cell.v === "number") cell.t = "n";
       if (typeof cell.v === "boolean") cell.t = "b";
@@ -193,11 +198,15 @@ function getWs(data, cloums, currencyType, headNum) {
         cell.v = datenum(cell.v);
       } else cell.t = "s"; // 素有单元格都设置成文字类型
       setCellStyle(cell, cellObject, R < headNum ? "header" : "content");
+      if (R === 0&&title) {
+        // 标题不要bord
+        cell.s.border={}
+      }
       ws[cell_ref] = cell;
     }
   }
   if (range.s.c < 10000000) ws["!ref"] = XLSX.utils.encode_range(range);
-  debug(`ws ${headNum} `)
+  debug(`ws ${headNum} `);
   return ws;
 }
 
@@ -249,6 +258,7 @@ function setColWidth(colWidth, data, globalStyle) {
     );
     /*以第一行为初始值*/
     result = sheetColWidth[0];
+    debug(`result:${result}`);
     for (let i = 1; i < sheetColWidth.length; i++) {
       for (let j = 0; j < sheetColWidth[i].length; j++) {
         if (result[j]["wch"] < sheetColWidth[i][j]["wch"]) {
@@ -277,7 +287,7 @@ function setSingleCell(cellStyle, dataInfo, globalStyle) {
   }
   for (let index = 0; index < cellStyle.length; index++) {
     const s = cellStyle[index];
-   const { border, font, alignment, fill } = s;
+    const { border, font, alignment, fill } = s;
     dataInfo[s.cell].s = {
       border: border === {} ? border : border || globalStyle.border,
       font: font || globalStyle.font,

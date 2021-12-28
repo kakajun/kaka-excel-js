@@ -1,6 +1,6 @@
 import createDebugger from 'debug'
 const debug = createDebugger('excel-head')
-debug.enabled = true
+// debug.enabled = true
 /**
  * @description: 递归获取头部所有id
  * @param {*} columns

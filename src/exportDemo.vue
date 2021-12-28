@@ -46,24 +46,28 @@ export default {
           },
           cellStyle: [
             {
-              cell: "A7",
+              cell: "A1",
               font: {
                 name: "宋体",
-                sz: 14,
-                color: { rgb: "ffffff" },
+                sz: 20,
+                color: { rgb: "000" },
                 bold: true,
               },
-              alignment: "center",
-              fill: {
-                fgColor: { rgb: "ccc" },
-              },
+            fill: {
+              // 背景颜色设置
+              fgColor: { rgb: "f0f8ff" }
+            },
+            alignment: {
+              // 是否居中center | 左对齐left | 右对齐right
+              horizontal: "center",
+              vertical: "center",
+            },
             },
           ],
         },
       ],
     };
   },
-  created() {},
   methods: {
     /**
      * @description: html 导出
@@ -98,11 +102,18 @@ export default {
         }
       }
     },
-    exportOut(two) {
+    exportOut() {
+      const sheet=this.sheet
+      // 这里模拟一万条数据
+      let arr=[]
+      for (let index = 0; index < 200; index++) {
+        arr= arr.concat(datas)
+      }
+      sheet[0].table=arr
       const options = {
         bookType: this.bookType,
         filename: this.filename,
-        sheet: this.sheet,
+        sheet,
         onError: this.onError,
       };
       excelExport(options);
