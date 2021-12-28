@@ -15,7 +15,7 @@ import {
 } from "./excel-head";
 
 import createDebugger from 'debug'
-const debug = createDebugger('excel-style')
+const debug = createDebugger('index')
   debug.enabled = true
 
 // 文件类型

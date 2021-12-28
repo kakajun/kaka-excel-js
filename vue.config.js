@@ -1,5 +1,3 @@
-
-// console.log(process.title);
 const config= {
   publicPath: "./",
   productionSourceMap: false,
