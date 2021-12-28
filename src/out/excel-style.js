@@ -52,9 +52,9 @@ function setCellStyle(cell, cellObject, type) {
       bold: false,
     },
     alignment: {
-      // 是否居中center | 左对齐left | 右对齐right
+      // 是否居中center | 左对齐left | 右对齐right, 如果配有align,那么按align, 否则按type
       horizontal:
-        cellObject.type && cellObject.type === "decimal" ? "right" : "left",
+       cellObject.align?cellObject.align: cellObject.type === "decimal" ? "right" : "left",
       vertical: "center",
     },
     border: border_s,

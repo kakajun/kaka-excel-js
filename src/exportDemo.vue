@@ -114,6 +114,7 @@ export default {
         bookType: this.bookType,
         filename: this.filename,
         sheet,
+        // sheet:this.sheet,
         onError: this.onError,
       };
       excelExport(options);

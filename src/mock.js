@@ -16,6 +16,7 @@ const columns = [
     children: [
       {
         field: "A",
+         align: "right",
         title: "账面余额",
         type: "decimal",
       },
@@ -106,7 +107,7 @@ const datas = [
     rn: 2,
   },
   {
-    A: 423030.99,
+    A: 555555555555555555423030.99,
     B: 0,
     C: 4552556.79,
     D: 0,

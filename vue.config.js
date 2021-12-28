@@ -3,7 +3,7 @@ const config= {
   productionSourceMap: false,
 }
 // 只有在打包lib时才忽略,否则dev时会报错
-if (process.title.indexOf('lib')>-1) {
+if (process.title&&process.title.indexOf('lib')>-1) {
 config.configureWebpack={
     externals: {
         'pikaz-xlsx-style': 'pikaz-xlsx-style',
