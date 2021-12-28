@@ -15,9 +15,11 @@ import {
 } from "./excel-head";
 
 import createDebugger from 'debug'
+
 const debug = createDebugger('index')
-if (process.env==='development') {
-debug.enabled = true
+console.log(process.env,"process.env");
+if (process.env.NODE_ENV==='development') {
+   debug.enabled = true
 }
 // 文件类型
 const excelEnum = {
@@ -83,7 +85,8 @@ export default function exportExcel(options) {
     setCellCode(columns, null, null);
     // 最大层级集合
     const allLevels = getLevels(columns, null);
-    debug(`columns: ${columns}`)
+    debug(`asdfasdf%o:${columns}`)
+     debug('asdfasdf%O:',columns)
     // 获取最大层级
     const maxLevel = Math.max(...allLevels);
     const setMergesObj = setMerges(columns, maxLevel, merges, title);
@@ -93,6 +96,7 @@ export default function exportExcel(options) {
     debug(`merges: ${merges}`)
     debug(`multiHeader: ${multiHeader}`)
     sheetName = sheetName || excelDefault.sheetName;
+    // debug(`excel   %o: ${excel.excelData}`)
     // 默认全局样式覆盖
     const dgStyle = excelDefault.globalStyle;
     if (globalStyle) {
@@ -147,7 +151,7 @@ export default function exportExcel(options) {
   let bookType2 =
     excelEnum.bookType.filter((i) => i === bookType)[0] ||
     excelEnum.bookType[0];
-  writeExcel(wb, bookType2, filename, beforeExport);
+  // writeExcel(wb, bookType2, filename, beforeExport);
 
 }
 /**

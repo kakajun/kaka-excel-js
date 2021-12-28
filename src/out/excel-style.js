@@ -1,8 +1,9 @@
 import XLSX from "pikaz-xlsx-style";
+// import moduleName from 'module';
 import createDebugger from "debug";
 const debug = createDebugger("excel-style");
-if (process.env==='development') {
-debug.enabled = true
+if (process.env.NODE_ENV==='development') {
+// debug.enabled = true
 }
 /**
  * 设置单元格样式

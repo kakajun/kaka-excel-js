@@ -20,8 +20,8 @@
 
 <script>
 import { columns, datas } from "./mock.js";
-// import excelExport from "./out";
-import excelExport from "../lib/kakaExcelJs.umd.js";
+import excelExport from "./out";
+// import excelExport from "../lib/kakaExcelJs.umd.js";
 export default {
   name: "exportDemo",
   components: {},
@@ -103,18 +103,18 @@ export default {
       }
     },
     exportOut() {
-      const sheet=this.sheet
-      // 这里模拟一万条数据
-      let arr=[]
-      for (let index = 0; index < 200; index++) {
-        arr= arr.concat(datas)
-      }
-      sheet[0].table=arr
+      // const sheet=this.sheet
+      // // 这里模拟一万条数据
+      // let arr=[]
+      // for (let index = 0; index < 200; index++) {
+      //   arr= arr.concat(datas)
+      // }
+      // sheet[0].table=arr
       const options = {
         bookType: this.bookType,
         filename: this.filename,
-        sheet,
-        // sheet:this.sheet,
+        // sheet,
+        sheet:this.sheet,
         onError: this.onError,
       };
       excelExport(options);

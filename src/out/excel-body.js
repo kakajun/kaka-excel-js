@@ -1,17 +1,16 @@
+import createDebugger from 'debug'
+const debug = createDebugger('excel-body')
+if (process.env.NODE_ENV==='development') {
+debug.enabled = true
+}
 /**
  * 获取完整的表格数据，把合并的单元格补充上去
  * @param header
  * @param body
  * @returns {*[]}
  */
-function fillTableData({ header, body }) {
-  let headerCopy = [];
+function fillTableData( body ) {
   let bodyCopy = [];
-  header.forEach((row) => {
-    let copyRow = [];
-    for (let key in row) if (key) copyRow.push(row[key]);
-    headerCopy.push(copyRow);
-  });
   body.forEach((row) => {
     let copyRow = [];
     for (let key in row) if (key) copyRow.push(row[key]);
@@ -44,9 +43,40 @@ function fillTableData({ header, body }) {
     }
   }
 
-  return headerCopy.concat(bodyCopy);
+  return bodyCopy
 }
 
+    // 通用行合并函数（将相同多列数据合并为一行）
+ function   rowspanMethod({ row, _rowIndex, column, visibleData }) {
+      const fields = ["sex"];
+      const cellValue = row[column.property];
+      if (cellValue && fields.includes(column.property)) {
+        const prevRow = visibleData[_rowIndex - 1];
+        let nextRow = visibleData[_rowIndex + 1];
+        if (prevRow && prevRow[column.property] === cellValue) {
+          return { rowspan: 0, colspan: 0 };
+        } else {
+          let countRowspan = 1;
+          while (nextRow && nextRow[column.property] === cellValue) {
+            nextRow = visibleData[++countRowspan + _rowIndex];
+          }
+          if (countRowspan > 1) {
+            return { rowspan: countRowspan, colspan: 1 };
+          }
+        }
+      }
+    }
+function  colspanMethod({ rowIndex, columnIndex }) {
+      if (rowIndex % 2 === 0) {
+        if (columnIndex === 1) {
+          return { rowspan: 2, colspan: 1 }
+        } else if (columnIndex === 2) {
+          return { rowspan: 1, colspan: 2 }
+        } else if (columnIndex === 3) {
+          return { rowspan: 0, colspan: 0 }
+        }
+      }
+    }
 /**
  * 填充被合并的单元格
  * @param data
@@ -112,57 +142,5 @@ function fillRow(data, rowspan, rowIndex, colIndex, cell) {
   }
 }
 
-/**
- * 获取合并的单元格 :
- *
- */
-function getDataAndmerges(tableData) {
-  let excelData = [];
-  let merges = [];
-  for (let rowIndex = 0, rLen = tableData.length; rowIndex < rLen; rowIndex++) {
-    //循环表格数据
-    let excelRow = [];
-    for (
-      let colIndex = 0, cLen = tableData[rowIndex].length;
-      colIndex < cLen;
-      colIndex++
-    ) {
-      // 循环每一行数据
-      excelRow.push(tableData[rowIndex][colIndex].value);
-      let merge = getMerge(tableData[rowIndex][colIndex], rowIndex, colIndex);
-      if (merge) merges.push(merge);
-    }
-    excelData.push(excelRow);
-  }
-  return { excelData: excelData, merges };
-}
 
-
-/**
- * 获取合并单元格 地址
- * 单元格地址对象的存储格式为{c:C, r:R}，其中C和R分别代表的是0索引列和行号。例如单元格地址B5用对象{c:1, r:4}表示。
- * 单元格范围对象存储格式为{s:S, e:E}，其中S是第一个单元格，E是最后一个单元格。范围是包含关系。例如范围 A3:B7用对象{s:{c:0, r:2}, e:{c:1, r:6}}表示
- * @param cell
- * @param rowIndex
- * @param colIndex
- * @returns {{s: {r: *, c: *}, e}|null}
- */
-function getMerge(cell, rowIndex, colIndex) {
-  // c 列，r:行
-  let s = { c: colIndex, r: rowIndex }; // 第一个单元格
-  let e = {}; // 最后一个单元格
-  if (cell.colspan > 1 && cell.rowspan === 1) {
-    // 列合并
-    e = { r: rowIndex, c: colIndex + cell.colspan - 1 };
-  } else if (cell.rowspan > 1 && cell.colspan === 1) {
-    // 行合并
-    e = { r: rowIndex + cell.rowspan - 1, c: colIndex };
-  } else if (cell.rowspan > 1 && cell.colspan > 1) {
-    // 行列合并
-    e = { r: rowIndex + cell.rowspan - 1, c: colIndex + cell.colspan - 1 };
-  }
-  if (Object.keys(e).length) return { s, e };
-  return null;
-}
-
-export {fillTableData,getDataAndmerges}
+export default fillTableData
