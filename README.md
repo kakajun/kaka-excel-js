@@ -63,10 +63,11 @@ data 数据格式为普通后端返回的key-value格式
 
 具体使用方法参见[pikaz-excel-js](https://github.com/pikaz-18/pikaz-excel-js.git)
 
-不足: 由于pikaz-xlsx-style打包的是umd格式, 并不支持在vite中用esm方式加载, 暂时只能在webpack或vue-cli 中使用
+不足:
+1. 没有使用ts+vue3进行测试, 由于pikaz-xlsx-style打包的是umd格式, 并不支持在vite中用esm方式加载, 暂时只能在webpack或vue-cli 中使用
 
 ### 后续
-如果你发现插件的bug,请
+如果你发现插件的bug,请提交issue
 
 ## Reference
 [https://www.jianshu.com/p/31534691ed53](https://www.jianshu.com/p/31534691ed53)

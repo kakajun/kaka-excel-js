@@ -2,7 +2,6 @@
   <div >
      <vxe-toolbar>
       <template v-slot:buttons>
-        <vxe-button @click="exportEvent">导出xlsxBy pugin</vxe-button>
         <vxe-button @click="exportOut">导出demo</vxe-button>
       </template>
     </vxe-toolbar>
@@ -21,6 +20,7 @@
 <script>
 import { columns, datas } from "./mock.js";
 import excelExport from "./out";
+import { Loading } from 'element-ui';
 // import excelExport from "../lib/kakaExcelJs.umd.js";
 export default {
   name: "exportDemo",
@@ -69,19 +69,6 @@ export default {
     };
   },
   methods: {
-    /**
-     * @description: html 导出
-     * @param {*}
-     * @return {*}
-     */
-    exportEvent() {
-      this.$refs.xTable.exportData({
-        filename: "export",
-        sheetName: "Sheet1",
-        type: "xlsx",
-      });
-    },
-
     // 通用行合并函数（将相同多列数据合并为一行）
     rowspanMethod({ row, _rowIndex, column, visibleData }) {
       const fields = ["sex"];
@@ -102,22 +89,43 @@ export default {
         }
       }
     },
+
+    /**
+     * @description: 导出方法
+     * @param {*}
+     * @return {*}
+     */
     exportOut() {
-      // const sheet=this.sheet
-      // // 这里模拟一万条数据
-      // let arr=[]
-      // for (let index = 0; index < 200; index++) {
-      //   arr= arr.concat(datas)
-      // }
-      // sheet[0].table=arr
+      const sheet=this.sheet
+      // 这里模拟十万条数据
+      let arr=[]
+      for (let index = 0; index < 2000; index++) {
+        arr= arr.concat(datas)
+      }
+      sheet[0].table=arr
       const options = {
         bookType: this.bookType,
         filename: this.filename,
-        // sheet,
-        sheet:this.sheet,
+        sheet,
+        // sheet:this.sheet,
         onError: this.onError,
       };
-      excelExport(options);
+       const loading = this.$loading({
+          lock: true,
+          text: '正在导出中,请稍后...',
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.8)'
+        });
+
+       setTimeout(async() => {
+        let final=await  excelExport(options);
+        if (final) {
+            this.$message.success('导出成功!')
+        }else {
+          this.$message.success('导出失败!')
+        }
+          loading.close();
+        }, 100);
     },
     /**
      * @name: 导出错误

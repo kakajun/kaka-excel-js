@@ -35,9 +35,9 @@ const excelEnum = {
  *      beforeExport}  导出前
  * @return:
  */
-export default function exportExcel(options) {
-
-  const {
+export default async function exportExcel(options) {
+  try {
+      const {
     bookType = "xlsx",
     filename = "excel",
     sheet = [],
@@ -151,8 +151,12 @@ export default function exportExcel(options) {
   let bookType2 =
     excelEnum.bookType.filter((i) => i === bookType)[0] ||
     excelEnum.bookType[0];
-  // writeExcel(wb, bookType2, filename, beforeExport);
-
+  await writeExcel(wb, bookType2, filename, beforeExport);
+    return true
+  } catch (error) {
+    debug(`导出失败:${error}`)
+    return false
+  }
 }
 /**
  * @name: workbook对象
@@ -173,8 +177,8 @@ function Workbook() {
  * @param {type}
  * @return:
  */
-function writeExcel(wb, bookType, filename, beforeExportFn) {
-  const wbout = XLSX.write(wb, {
+async  function  writeExcel(wb, bookType, filename, beforeExportFn) {
+  const wbout =await XLSX.write(wb, {
     bookType: bookType,
     bookSST: false,
     type: "binary",
