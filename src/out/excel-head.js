@@ -25,7 +25,7 @@ function getColumnsIds(columns, keys) {
   }
   return nodes;
 }
-let CURRENT_CELL_INDEX = 0;
+
 
 /**
  * @description: 设置列的属性CellIndex,CellCode
@@ -33,7 +33,9 @@ let CURRENT_CELL_INDEX = 0;
  * @param {*} parentNode
  * @return {*}
  */
-function setCellCode(columns, parentNode) {
+function setCellCode(columns) {
+  let CURRENT_CELL_INDEX = 0;
+  function handleSetCellCode(columns, parentNode) {
   const levels = [];
   for (let index = 0; index < columns.length; index++) {
     const li = columns[index];
@@ -49,10 +51,12 @@ function setCellCode(columns, parentNode) {
     li.CellCode = numberToCellCode(CURRENT_CELL_INDEX);
     const children = li.children;
     if (children && children.length > 0) {
-      setCellCode(children, li);
+      handleSetCellCode(children, li);
     }
   }
   return levels;
+}
+  handleSetCellCode(columns, null)
 }
 //转换数字到EXCEL单元格编号
 function numberToCellCode(number) {

@@ -82,7 +82,7 @@ export default async function exportExcel(options) {
     const tHeader = nodes.map((item) => item.title||item.text);
 
     // 获取最大层级
-    setCellCode(columns, null, null);
+    setCellCode(columns);
     // 最大层级集合
     const allLevels = getLevels(columns, null);
     debug(`asdfasdf%o:${columns}`)
