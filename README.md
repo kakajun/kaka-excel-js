@@ -69,6 +69,8 @@ data 数据格式为普通后端返回的key-value格式
 ### 后续
 如果你发现插件的bug,请提交issue
 
+### 变更记录
+0.0.6  修复多次导出报错
 ## Reference
 [https://www.jianshu.com/p/31534691ed53](https://www.jianshu.com/p/31534691ed53)
 
