@@ -152,7 +152,7 @@ function datenum(v, date1904) {
  * @param {*} currencyType   转换单位
  * @return {*}
  */
-function getWs(data, cloums, currencyType, headNum,title) {
+function getWs(data, cloums, currencyType=1, headNum,title) {
   if (title) {
         // 有标题的话,表头多一行
      headNum =headNum + 1;
@@ -182,7 +182,7 @@ function getWs(data, cloums, currencyType, headNum,title) {
         else {
           if (cellObject.unit) {
             // 如果列头包含'%'等,直接加到后面
-            value = value + cellObject.unit;
+            value =currencyF(value)  + cellObject.unit;
           } else {
             // 单位转换
             value = currencyF(value / currencyType);
