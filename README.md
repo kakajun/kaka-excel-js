@@ -71,6 +71,7 @@ data 数据格式为普通后端返回的key-value格式
 
 ### 变更记录
 0.0.6  修复多次导出报错
+0.0.7  修复百分比等也要保留两位小数
 ## Reference
 [https://www.jianshu.com/p/31534691ed53](https://www.jianshu.com/p/31534691ed53)
 
