@@ -37,8 +37,8 @@
     "xlsx": "^0.17.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-service": "~4.3.0",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-service": "~5.0.8",
     "element-ui": "^2.15.6",
     "gh-pages": "^3.2.3",
     "kaka-excel-js": "^0.0.1",
