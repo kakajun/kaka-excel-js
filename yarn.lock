@@ -1469,7 +1469,7 @@
     "printj" "~1.2.2"
 
 "adler-32@~1.2.0":
-  "integrity" "sha1-aj5r8KY5ALoVZSgIyxXGgT0aXyU= sha512-/vUqU/UY4MVeFsg+SsK6c+/05RZXIHZMGJA+PX5JyWI0ZRcBpupnRuPLU/NXXoFwMYCPCoxIfElM2eS+DUXCqQ=="
+  "integrity" "sha512-/vUqU/UY4MVeFsg+SsK6c+/05RZXIHZMGJA+PX5JyWI0ZRcBpupnRuPLU/NXXoFwMYCPCoxIfElM2eS+DUXCqQ=="
   "resolved" "https://registry.npmmirror.com/adler-32/-/adler-32-1.2.0.tgz"
   "version" "1.2.0"
   dependencies:
@@ -2210,7 +2210,7 @@
   "resolved" "https://registry.npmmirror.com/caseless/-/caseless-0.12.0.tgz"
   "version" "0.12.0"
 
-"cfb@^1.1.4", "cfb@>=0.10.0":
+"cfb@^1.1.4", "cfb@>=0.10.0", "cfb@~1.2.1":
   "integrity" "sha512-wT2ScPAFGSVy7CY+aauMezZBnNrfnaLSrxHUHdea+Td/86vrk6ZquggV+ssBR88zNs0OnBkL2+lf9q0K+zVGzQ=="
   "resolved" "https://registry.npmmirror.com/cfb/-/cfb-1.2.1.tgz"
   "version" "1.2.1"
@@ -2387,19 +2387,6 @@
   "integrity" "sha1-2jCcwmPfFZlMaIypAheco8fNfH4= sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg=="
   "resolved" "https://registry.npmmirror.com/clone/-/clone-1.0.4.tgz"
   "version" "1.0.4"
-
-"cnbi-xlsx-style@^0.1.0":
-  "integrity" "sha512-PoTxu6HUTmSVatlAG4RVZK1oQhK1e//UfkTJhhSZ8sR6Owd6OrqDYoWYJQJMN26d49VY3TWEocej9lS026dbfQ=="
-  "resolved" "https://registry.npmmirror.com/cnbi-xlsx-style/-/cnbi-xlsx-style-0.1.0.tgz"
-  "version" "0.1.0"
-  dependencies:
-    "adler-32" ""
-    "cfb" ">=0.10.0"
-    "codepage" "~1.3.6"
-    "commander" ""
-    "crc-32" ""
-    "jszip" "2.4.0"
-    "ssf" "~0.8.1"
 
 "coa@^2.0.2":
   "integrity" "sha512-q5/jG+YQnSy4nRTV4F7lPepBJZ8qBNJJDBuJdoejDyLXgmL7IEo+Le2JDZudFTFt7mrCqIRaSjws4ygRCTCAXA=="
@@ -2673,13 +2660,10 @@
     "js-yaml" "^3.13.1"
     "parse-json" "^4.0.0"
 
-"crc-32@", "crc-32@~1.2.0":
-  "integrity" "sha512-1uBwHxF+Y/4yF5G48fwnKq6QsIXheor3ZLPT80yGBV1oEUwpPojlEhQbWKVw1VwcTQyMGHK1/XMmTjmlsmTTGA=="
-  "resolved" "https://registry.npmmirror.com/crc-32/-/crc-32-1.2.0.tgz"
-  "version" "1.2.0"
-  dependencies:
-    "exit-on-epipe" "~1.0.1"
-    "printj" "~1.1.0"
+"crc-32@", "crc-32@~1.2.0", "crc-32@~1.2.1":
+  "integrity" "sha512-ROmzCKrTnOwybPcJApAA6WBWij23HVfGVNKqqrZpuyZOHqK2CwHSvpGuyt/UNNvaIjEd8X5IFGp4Mh+Ie1IHJQ=="
+  "resolved" "https://registry.npmmirror.com/crc-32/-/crc-32-1.2.2.tgz"
+  "version" "1.2.2"
 
 "create-ecdh@^4.0.0":
   "integrity" "sha512-mf+TCx8wWc9VpuxfP2ht0iSISLZnt0JgWlrOKZiNqyUZWnjIaCIVNQArMHnCZKfEYRg6IM7A+NeJoN8gf/Ws0A=="
@@ -4896,13 +4880,13 @@
   dependencies:
     "pako" "~0.2.5"
 
-"kaka-excel-js@^0.0.1":
-  "integrity" "sha512-++ckcR8n9frxRcRagFROdYPdyUNFYpCkc4rEzB5JIV91dMHYPW9FppRyZEPzl7XkS+XKIx7uRy8Nm2EO9IbKsg=="
-  "resolved" "https://registry.npmmirror.com/kaka-excel-js/-/kaka-excel-js-0.0.1.tgz"
-  "version" "0.0.1"
+"kaka-excel-js@^0.0.7":
+  "integrity" "sha512-wSd13ssWy7BaV5SlDajGautv6nkB1hoclzk2Y3yxjbWsgUji7Ww/IwwoBIdGNQ/XmTX+9Zd8K9vlLC7MVh7mjA=="
+  "resolved" "https://registry.npmmirror.com/kaka-excel-js/-/kaka-excel-js-0.0.7.tgz"
+  "version" "0.0.7"
   dependencies:
-    "cnbi-xlsx-style" "^0.1.0"
     "core-js" "^3.6.4"
+    "debug" "^4.3.3"
     "file-saver" "^2.0.2"
     "pikaz-xlsx-style" "^0.1.1"
     "vue" "^2.6.14"
@@ -8058,7 +8042,7 @@
     "hash-sum" "^1.0.2"
     "loader-utils" "^1.0.2"
 
-"vue-template-compiler@^2.0.0", "vue-template-compiler@^2.6.11":
+"vue-template-compiler@^2.0.0", "vue-template-compiler@^2.6.14":
   "integrity" "sha512-ODQS1SyMbjKoO1JBJZojSw6FE4qnh9rIpUZn2EUT86FKizx9uH5z6uXiIrm4/Nb/gwxTi/o17ZDEGWAXHvtC7g=="
   "resolved" "https://registry.npmmirror.com/vue-template-compiler/-/vue-template-compiler-2.6.14.tgz"
   "version" "2.6.14"
@@ -8348,14 +8332,27 @@
   "version" "3.5.1"
 
 "xlsx@^0.17.4":
-  "integrity" "sha512-9aKt8g9ZLP0CUdBX8L5xnoMDFwSiLI997eQnDThCaqQMYB9AEBIRzblSSNN/ICMGLYIHUO3VKaItcedZJ3ijIg=="
-  "resolved" "https://registry.npmmirror.com/xlsx/-/xlsx-0.17.4.tgz"
-  "version" "0.17.4"
+  "integrity" "sha512-lXNU0TuYsvElzvtI6O7WIVb9Zar1XYw7Xb3VAx2wn8N/n0whBYrCnHMxtFyIiUU1Wjf09WzmLALDfBO5PqTb1g=="
+  "resolved" "https://registry.npmmirror.com/xlsx/-/xlsx-0.17.5.tgz"
+  "version" "0.17.5"
   dependencies:
     "adler-32" "~1.2.0"
     "cfb" "^1.1.4"
     "codepage" "~1.15.0"
     "crc-32" "~1.2.0"
+    "ssf" "~0.11.2"
+    "wmf" "~1.0.1"
+    "word" "~0.3.0"
+
+"xlsx@^0.18.5":
+  "integrity" "sha512-dmg3LCjBPHZnQp5/F/+nnTa+miPJxUXB6vtk42YjBBKayDNagxGEeIdWApkYPOf3Z3pm3k62Knjzp7lMeTEtFQ=="
+  "resolved" "https://registry.npmmirror.com/xlsx/-/xlsx-0.18.5.tgz"
+  "version" "0.18.5"
+  dependencies:
+    "adler-32" "~1.3.0"
+    "cfb" "~1.2.1"
+    "codepage" "~1.15.0"
+    "crc-32" "~1.2.1"
     "ssf" "~0.11.2"
     "wmf" "~1.0.1"
     "word" "~0.3.0"

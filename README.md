@@ -9,9 +9,9 @@
 ### With npm or yarn
 
 ```bash
-yarn add pikaz-excel-js file-saver kaka-excel-js
+yarn add kaka-excel-js  file-saver pikaz-xlsx-style
 
-npm i -S pikaz-excel-js file-saver kaka-excel-js
+npm i -S  kaka-excel-js file-saver pikaz-xlsx-style
 
 
 ```
