@@ -1,7 +1,7 @@
 {
   "name": "kaka-excel-js",
   "version": "0.0.7",
-  "description": "A tool for exporting excel from the front",
+  "description": "A tool for exporting excel from the front;vue2",
   "private": false,
   "main": "lib/kakaExcelJs.umd.js",
   "unpkg": "lib/kakaExcelJs.umd.min.js",

@@ -20,6 +20,51 @@ npm i -S pikaz-excel-js file-saver kaka-excel-js
 
 ```js
 import excelExport from "kaka-excel-js";
+export default {
+ data() {
+    return {
+      tableColumn: columns,
+      tableDatas: datas,
+      bookType: "xlsx",
+      filename: "export-demo",
+      sheet: [
+        {
+          title: "XX统计表",
+          table: datas,
+          columns:this.tableColumn,
+          sheetName: "XX统计表",
+          // 这个是数值转换单位,传10000转换为万元
+          currencyType: 10000,
+          globalStyle: {
+            font: {
+              color: { rgb: "ff7e00" },
+            },
+          },
+          cellStyle: [
+            {
+              cell: "A1",
+              font: {
+                name: "宋体",
+                sz: 20,
+                color: { rgb: "000" },
+                bold: true,
+              },
+            fill: {
+              // 背景颜色设置
+              fgColor: { rgb: "f0f8ff" }
+            },
+            alignment: {
+              // 是否居中center | 左对齐left | 右对齐right
+              horizontal: "center",
+              vertical: "center",
+            },
+            },
+          ],
+        },
+      ],
+    };
+ },
+methods: {
   /**
      * @description: 导出方法
      * @param {*}
@@ -56,6 +101,8 @@ import excelExport from "kaka-excel-js";
           loading.close();
         }, 100);
     }
+  }
+ }
 ```
 
 ## demo
