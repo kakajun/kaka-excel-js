@@ -1,8 +1,9 @@
 <template>
-  <div >
-     <vxe-toolbar>
+  <div>
+    <vxe-toolbar>
       <template v-slot:buttons>
         <vxe-button @click="exportOut">导出demo</vxe-button>
+          <vxe-button @click="exportOut2">导出demo2</vxe-button>
       </template>
     </vxe-toolbar>
 
@@ -20,7 +21,9 @@
 <script>
 import { columns, datas } from "./mock.js";
 import excelExport from "./out";
-// import excelExport from "../lib/kakaExcelJs.umd.js";
+// import excelExport from "../lib/kakaExcelJs.js";
+import test from "./test";
+// import excelExport from "../lib/kakaExcelJs.common.js";
 export default {
   name: "exportDemo",
   components: {},
@@ -52,15 +55,15 @@ export default {
                 color: { rgb: "000" },
                 bold: true,
               },
-            fill: {
-              // 背景颜色设置
-              fgColor: { rgb: "f0f8ff" }
-            },
-            alignment: {
-              // 是否居中center | 左对齐left | 右对齐right
-              horizontal: "center",
-              vertical: "center",
-            },
+              fill: {
+                // 背景颜色设置
+                fgColor: { rgb: "f0f8ff" },
+              },
+              alignment: {
+                // 是否居中center | 左对齐left | 右对齐right
+                horizontal: "center",
+                vertical: "center",
+              },
             },
           ],
         },
@@ -88,6 +91,9 @@ export default {
         }
       }
     },
+    exportOut2() {
+      this.commonOut(test);
+    },
 
     /**
      * @description: 导出方法
@@ -95,13 +101,13 @@ export default {
      * @return {*}
      */
     exportOut() {
-      const sheet=this.sheet
+      const sheet = this.sheet;
       // 这里模拟十万条数据
-      let arr=[]
+      let arr = [];
       for (let index = 0; index < 2000; index++) {
-        arr= arr.concat(datas)
+        arr = arr.concat(datas);
       }
-      sheet[0].table=arr
+      sheet[0].table = arr;
       const options = {
         bookType: this.bookType,
         filename: this.filename,
@@ -109,22 +115,25 @@ export default {
         // sheet:this.sheet,
         onError: this.onError,
       };
-       const loading = this.$loading({
-          lock: true,
-          text: '正在导出中,请稍后...',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.8)'
-        });
+      this.commonOut(options);
+    },
+    commonOut(options) {
+      const loading = this.$loading({
+        lock: true,
+        text: "正在导出中,请稍后...",
+        spinner: "el-icon-loading",
+        background: "rgba(0, 0, 0, 0.8)",
+      });
 
-       setTimeout(async() => {
-        let final=await  excelExport(options);
+      setTimeout(async () => {
+        let final = await excelExport(options);
         if (final) {
-            this.$message.success('导出成功!')
-        }else {
-          this.$message.success('导出失败!')
+          this.$message.success("导出成功!");
+        } else {
+          this.$message.error("导出失败!");
         }
-          loading.close();
-        }, 100);
+        loading.close();
+      }, 100);
     },
     /**
      * @name: 导出错误
@@ -132,7 +141,7 @@ export default {
      * @return:
      */
     onError(err) {
-      console.log(err);
+      console.error(err);
     },
   },
 };

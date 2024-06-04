@@ -1,3 +1,4 @@
+[![](https://camo.githubusercontent.com/28479a7a834310a667f36760a27283f7389e864a/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f76322d646174657069636b65722e737667)](https://camo.githubusercontent.com/28479a7a834310a667f36760a27283f7389e864a/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f76322d646174657069636b65722e737667) [![build status](https://github.com/kakajun/kaka-excel-js/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/kakajun/kaka-excel-js/actions/workflows/gh-pages.yml)
 ## Introduction
 
 这个插件解决一个前端导出上万条数据, 如果都渲染出来, 页面会卡死, 如果分页导出, 又有一个需要合并的问题, 所以这边在结合 git 上的一些开源项目的基础上进行二次封装, 使得表格数据只需要请求后端接口数据, 不展示所有数据的基础上进行简单的封装，做到开箱即用，降低使用成本。
@@ -20,6 +21,51 @@ npm i -S  kaka-excel-js file-saver pikaz-xlsx-style
 
 ```js
 import excelExport from "kaka-excel-js";
+export default {
+ data() {
+    return {
+      tableColumn: columns,
+      tableDatas: datas,
+      bookType: "xlsx",
+      filename: "export-demo",
+      sheet: [
+        {
+          title: "XX统计表",
+          table: datas,
+          columns:this.tableColumn,
+          sheetName: "XX统计表",
+          // 这个是数值转换单位,传10000转换为万元
+          currencyType: 10000,
+          globalStyle: {
+            font: {
+              color: { rgb: "ff7e00" },
+            },
+          },
+          cellStyle: [
+            {
+              cell: "A1",
+              font: {
+                name: "宋体",
+                sz: 20,
+                color: { rgb: "000" },
+                bold: true,
+              },
+            fill: {
+              // 背景颜色设置
+              fgColor: { rgb: "f0f8ff" }
+            },
+            alignment: {
+              // 是否居中center | 左对齐left | 右对齐right
+              horizontal: "center",
+              vertical: "center",
+            },
+            },
+          ],
+        },
+      ],
+    };
+ },
+methods: {
   /**
      * @description: 导出方法
      * @param {*}
@@ -56,6 +102,8 @@ import excelExport from "kaka-excel-js";
           loading.close();
         }, 100);
     }
+  }
+ }
 ```
 
 ## demo

@@ -154,7 +154,7 @@ export default async function exportExcel(options) {
   await writeExcel(wb, bookType2, filename, beforeExport);
     return true
   } catch (error) {
-    debug(`导出失败:${error}`)
+    console.error(`导出失败:${error}`);
     return false
   }
 }

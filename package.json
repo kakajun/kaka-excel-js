@@ -1,7 +1,7 @@
 {
   "name": "kaka-excel-js",
-  "version": "0.0.7",
-  "description": "A tool for exporting excel from the front",
+  "version": "0.0.9",
+  "description": "A tool for exporting excel from the front;vue2",
   "private": false,
   "main": "lib/kakaExcelJs.common.js",
   "unpkg": "lib/kakaExcelJs.umd.min.js",
@@ -20,7 +20,8 @@
   "scripts": {
     "dev": "vue-cli-service serve src/main.js",
     "lib": "vue-cli-service build --target lib --name kakaExcelJs --dest lib src/out/index.js",
-    "build": "npm run lib && vue-cli-service build --dest dist src/main.js"
+    "build": "npm run lib && vue-cli-service build --dest dist src/main.js",
+    "lib2": "esbuild src/out/index.js --bundle --format=esm --outfile=lib/kakaExcelJs.js --minify=false --external:file-saver --external:debug"
   },
   "repository": {
     "type": "git",
@@ -30,19 +31,20 @@
     "url": "https://github.com/kakajun/kaka-excel-js/issues"
   },
   "dependencies": {
+    "debug": "^4.3.3",
     "file-saver": "^2.0.2",
-    "pikaz-xlsx-style": "^0.1.1",
+    "pikaz-xlsx-style": "^0.1.2",
     "xlsx": "^0.17.4"
   },
   "devDependencies": {
-    "vue": "^2.6.14",
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
-    "debug": "^4.3.3",
-    "core-js": "^3.6.4",
+    "core-js": "^3.37.0",
     "element-ui": "^2.15.6",
+    "esbuild": "^0.21.4",
     "gh-pages": "^3.2.3",
     "kaka-excel-js": "^0.0.1",
+    "vue": "^2.6.14",
     "vue-template-compiler": "^2.6.11",
     "vxe-table": "^3.4.12",
     "xe-utils": "^3.5.1"
