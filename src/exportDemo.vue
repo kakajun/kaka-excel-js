@@ -130,7 +130,7 @@ export default {
         if (final) {
           this.$message.success("导出成功!");
         } else {
-          this.$message.success("导出失败!");
+          this.$message.error("导出失败!");
         }
         loading.close();
       }, 100);
@@ -141,7 +141,7 @@ export default {
      * @return:
      */
     onError(err) {
-      console.log(err);
+      console.error(err);
     },
   },
 };
