@@ -292,7 +292,7 @@ function setSingleCell(cellStyle, dataInfo, globalStyle) {
     const s = cellStyle[index];
     const { border, font, alignment, fill } = s;
     dataInfo[s.cell].s = {
-      border: border === {} ? border : border || globalStyle.border,
+      border:  border || globalStyle.border,
       font: font || globalStyle.font,
       alignment: alignment || globalStyle.alignment,
       fill: fill || globalStyle.fill,

@@ -21,8 +21,9 @@
 <script>
 import { columns, datas } from "./mock.js";
 import excelExport from "./out";
+// import excelExport from "../lib/kakaExcelJs.js";
 import test from "./test";
-// import excelExport from "../lib/kakaExcelJs.umd.js";
+// import excelExport from "../lib/kakaExcelJs.common.js";
 export default {
   name: "exportDemo",
   components: {},
