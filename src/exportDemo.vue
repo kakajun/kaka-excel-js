@@ -3,7 +3,9 @@
     <vxe-toolbar>
       <template v-slot:buttons>
         <vxe-button @click="exportOut">导出demo</vxe-button>
-          <vxe-button @click="exportOut2">导出demo2</vxe-button>
+        <vxe-button @click="exportOut2">导出demo2</vxe-button>
+        <vxe-button @click="exportEvent">html导出(vxe)</vxe-button>
+        <vxe-button @click="exportOutByid">导出通过获取id</vxe-button>
       </template>
     </vxe-toolbar>
 
@@ -11,6 +13,7 @@
       border
       ref="xTable"
       height="600"
+      id="xTable"
       :span-method="rowspanMethod"
       :columns="tableColumn"
       :data="tableDatas"
@@ -23,6 +26,7 @@ import { columns, datas } from "./mock.js";
 import excelExport from "./out";
 // import excelExport from "../lib/kakaExcelJs.js";
 import test from "./test";
+import ExportExcelById from "./exportExcelById.js";
 // import excelExport from "../lib/kakaExcelJs.common.js";
 export default {
   name: "exportDemo",
@@ -71,6 +75,18 @@ export default {
     };
   },
   methods: {
+    /**
+     * @description: html 导出--通过vxe
+     * @param {*}
+     * @return {*}
+     */
+    exportEvent() {
+      this.$refs.xTable.exportData({
+        filename: "export",
+        sheetName: "Sheet1",
+        type: "xlsx",
+      });
+    },
     // 通用行合并函数（将相同多列数据合并为一行）
     rowspanMethod({ row, _rowIndex, column, visibleData }) {
       const fields = ["sex"];
@@ -94,7 +110,10 @@ export default {
     exportOut2() {
       this.commonOut(test);
     },
-
+    exportOutByid() {
+      const instans = new ExportExcelById();
+      instans.exportExcl('xTable',"通过id导出")
+    },
     /**
      * @description: 导出方法
      * @param {*}

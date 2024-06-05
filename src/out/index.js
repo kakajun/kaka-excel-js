@@ -129,6 +129,7 @@ export default async function exportExcel(options) {
       // 倒序循环
       data.unshift(...multiHeader);
     }
+    console.log(data,"data");
     title && data.unshift(title);
     let ws = getWs(data, nodes, currencyType, maxLevel + 1,title);
     if (merges && merges.length > 0) {

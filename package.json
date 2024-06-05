@@ -46,8 +46,10 @@
     "kaka-excel-js": "^0.0.1",
     "vue": "^2.6.14",
     "vue-template-compiler": "^2.6.11",
+    "vxe-table-plugin-export-xlsx":"2.2.2",
     "vxe-table": "^3.4.12",
-    "xe-utils": "^3.5.1"
+    "xe-utils": "^3.5.1",
+    "exceljs": "^4.3.0"
   },
   "browserslist": [
     "> 1%",
